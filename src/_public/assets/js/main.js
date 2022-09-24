@@ -99,13 +99,17 @@ $(document).ready(function () {
         }
     });
     //Change header when going to news page
-    var page_news = document.querySelector('.p-postnews');
+    const page_news = document.querySelector('.p-postnews');
    if(page_news){
-    var header = document.querySelector('.c-header').style.position = 'unset';
-    var header_ele = document.querySelector('.c-header');
-    var hidden = header_ele.querySelector('.c-header__text').style.display = 'none';
-    var addclass = document.querySelector('.c-header__list').classList.add('is-pagenews');
-    var logonews = document.querySelector('.c-header__nav .c-header__logo').classList.add('is-logonews');
+    const header = document.querySelector('.c-header');
+    header.style.position = 'unset';
+    const header_ele = document.querySelector('.c-header');
+    const hidden = header_ele.querySelector('.c-header__text');
+    hidden.style.display = 'none';
+    const addclass = document.querySelector('.c-header__list').classList.add('is-pagenews');
+    addclass.classList.add('is-pagenews');
+    const logonews = document.querySelector('.c-header__nav .c-header__logo');
+    logonews.classList.add('is-logonews');
    }
 });
 
